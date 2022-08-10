@@ -1,2 +1,2 @@
 # BD
-repositório para as atividades de banco de dados
+repositório para as atividades e avaliacoes de banco de dados
