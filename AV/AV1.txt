@@ -1,0 +1,4 @@
+Dados: codigo que compoe a materia prima da informacao
+Informacao: conjunto de dados
+Arquivo Convencional: arquivo comum sem forma de controle
+Banco de Dados: Arquivo organizado e controlado por um sistema
