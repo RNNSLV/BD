@@ -5,15 +5,16 @@ a modelagem conceitual.
 
 Defina os seguintes conceitos centrais da abordagem ER:
 a) Entidade;
-
+  Uma entidade representa um numero de ojetos em uma realidade modelada.
 b) Relacionamento;
-
+  Associação de objetos.
 c) Atributo;
-
+  Uma função que mapeia um conjunto de entidades em um dominio.
 d) Domínio de um Atributo;
-
+  Conjuntos de valores definido e nomeados, de onde os objetos extraem seus valores.
 e) Generalização/especialização;
-
+  Quando duas entidades podem ser agrupadas, em virtude de suas semelhanças, gerando uma super entidade.
 f) Entidade Associativa;
-
-g) Cardinalidade de um Atributo.
+  Entidade que possiciona entre duas outras entidades, sendo essa uada como uma associaçao das duas. EX.: 1 -> 2 // 1 -> 1.5 (entidade associativa) -> 2
+g) Cardinalidade de um Atributo;
+  A cardinalidade é um número que expressa o comportamento de determinada entidade associada.
