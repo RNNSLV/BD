@@ -4,5 +4,23 @@ BAIXAR SQLITE3 e BDBROWSER(SQLITE3)
   CRIAR UM BANCO DE DADOS NO BDbrowser
     NOME DO BANCO: BD
     FEITO TABELA FUNCIONARIO, DEPARTAMENTO, CARGO, LOTACAO.
-    
-        
+          CREATE TABLE "TB_PROFESSOR" (
+        	"ID"	INTEGER NOT NULL,
+        	"NOME"	TEXT NOT NULL,
+         	"DATA_NASC"	TEXT NOT NULL,
+         	PRIMARY KEY("ID" AUTOINCREMENT)
+           );
+
+          CREATE TABLE "TB_ALUNO" (
+            "ID"	INTEGER NOT NULL,
+            "NOME"	TEXT NOT NULL,
+            "DATA_NASC"	TEXT NOT NULL,
+            PRIMARY KEY("ID" AUTOINCREMENT)
+          );
+
+          CREATE TABLE "TB_DISCIPLINA" (
+            "ID"	INTEGER NOT NULL,
+            "NOME"	TEXT NOT NULL,
+            PRIMARY KEY("ID" AUTOINCREMENT)
+          );
+
