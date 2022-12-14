@@ -1,0 +1,49 @@
+const sqlite3 = require('sqlite3');
+
+const db = new sqlite3.Database('./node-scripts/database/DB_PESSOAL_RH.db', (error) => {
+    if (error) console.log(error);
+});
+
+db.serialize(() => {
+    db.run('create table if not exists TB_Aluno (id integer primary key autoincrement , name text)', (error) => {
+        if (error) console.log(error);
+    });
+    db.run('create table if not exists TB_Professor (id integer primary key autoincrement , name text)', (error) => {
+        if (error) console.log(error);
+    });
+    db.run('create table if not exists TB_Disciplina (id integer primary key autoincrement , name text)', (error) => {
+        if (error) console.log(error);
+    });
+    db.run('create table if not exists TB_MATRICULA (id integer primary key autoincrement, Aluno_Id foreing key TB_ALUNO(id)', (error) => {if (error) console.log(error);});
+  db.run('create table if not exists TB_MATRICULA (id integer primary key autoincrement, Aluno_Id foreing key TB_ALUNO(id), Disciplina_ID foreing key TB_DISCIPLINA(id), Professor_ID foreing key TB_PROFESSOR(id)', (error) => {if (error) console.log(error);});
+  db.run('create table if not exists TB_DISCIPLINA_PROFESSOR (id integer primary key autoincrement, Disciplina_id foreing key TB_DISCIPLINA(id) ,Professor_id foreing key TB_PROFESSOR(id)', (error) => {if (error) console.log(error);});
+    db.run('insert into TB_Aluno (name) values (?)', ['Renan'], (error) => {
+        if (error) console.log(error);
+    });
+
+    db.run('insert into TB_Professor (name) values (?)', ['Almeida'], (error) => {
+        if (error) console.log(error);
+    });
+
+    db.run('insert into TB_Disciplina (name) values (?)', ['Matematica'], (error) => {
+        if (error) console.log(error);
+    });
+    
+    console.log("TB_Aluno")
+
+    db.all('select * from TB_Aluno', (error, rows) => {
+        console.log(error, rows);
+    });
+console.log("TB_Professor")
+
+    db.all('select * from TB_Professor', (error, rows) => {
+        console.log(error, rows);
+    });
+console.log("TB_Disciplina")
+
+    db.all('select * from TB_Disciplina', (error, rows) => {
+        console.log(error, rows);
+    });
+
+
+});
